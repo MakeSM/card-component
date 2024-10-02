@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box } from './components/BoxCard.styled';
+import { ImageCard } from './components/ImageCard.styled';
+import { HeadlineCard } from './components/HeadlineCard.styled';
+import { themeStyle } from './styles/Theme.styled';
+import { TextCard } from './components/TextCard.styled';
+import { BtnCard } from './components/BtnCard.Styled';
+import { BoxBtn } from './components/BoxBtn.styled';
+import rectangleImage from './styles/images/Rectangle.png';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   return (
+      <div className="App">
+         <Box>
+            <ImageCard src={rectangleImage} alt='image desert'/>
+            <HeadlineCard color={themeStyle.colors.textDecoration.h1}>
+               Headline
+            </HeadlineCard>
+            <TextCard color={themeStyle.colors.textDecoration.text}>
+               Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit
+               molestie ornare in venen.
+            </TextCard>
+            <BoxBtn>
+               <BtnCard btnType="btnSee">See more</BtnCard>
+               <BtnCard btnType="btnSave">Save</BtnCard>
+            </BoxBtn>
+         </Box>
+      </div>
+   );
 }
 
 export default App;
