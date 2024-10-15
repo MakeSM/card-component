@@ -11,6 +11,6 @@ export const ImageCard = styled.img<ImageCardPropsType>`
    inset: 10px 10px auto 10px;
    border: none;
    border-radius: ${(props) => props.borderRadius || '10px'};
-   width: ${(props) => props.width || '280px'};
-   height: ${(props) => props.height || '170px'};
+   width: ${(props) => props.width || 'calc(100% - 20px)'};
+   height: ${(props) => props.height || 'auto'};
 `;
