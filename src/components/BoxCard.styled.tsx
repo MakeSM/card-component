@@ -6,6 +6,7 @@ export const Box = styled.div`
    justify-content: center;
    align-items: center;
    position: relative;
+	overflow: hidden;
    height: 100vh;
    border-radius: 15px;
    width: 300px;
